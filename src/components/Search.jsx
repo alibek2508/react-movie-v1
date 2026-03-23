@@ -20,7 +20,7 @@ export const Search = ({ addHandleSearch }) => {
 					value={text}
 					onChange={handleChangeInputText}
 				/>
-				<button>Search</button>
+				<button className="waves-effect waves-light btn-small">Search</button>
 			</form>
 		</>
 	);

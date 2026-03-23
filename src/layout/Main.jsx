@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Movies } from '../components/Movies';
 import { Search } from '../components/Search';
+import { Preloader } from '../components/Preloader';
 
 export const Main = () => {
 	const [movies, setMovies] = useState([]);
@@ -39,7 +40,7 @@ export const Main = () => {
 	return (
 		<div className="content container">
 			<Search addHandleSearch={addHandleSearchText} />
-			{loading ? <h1>Loading ... </h1> : <Movies movies={movies} />}
+			{loading ? <Preloader /> : <Movies movies={movies} />}
 		</div>
 	);
 };
