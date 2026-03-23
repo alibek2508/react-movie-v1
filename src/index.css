@@ -1,0 +1,35 @@
+*,
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	padding: 0 1rem;
+}
+.content {
+	min-height: calc(100vh - 70px - 64px);
+	padding: 20px 0;
+}
+
+.movie {
+	max-width: 300px;
+	min-height: 450px;
+	margin: 0;
+}
+.movies {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+img {
+	min-height: 450px;
+}
+.row .col {
+	padding: 0;
+}
+form {
+	width: 1245px;
+	padding: 0 0 20px 0;
+}
