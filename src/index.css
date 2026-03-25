@@ -20,21 +20,28 @@ nav {
 }
 .movies {
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 15px;
 }
 img {
 	min-height: 450px;
 }
-.row .col {
-	padding: 0;
-}
-form {
-	width: 1245px;
-	padding: 0 0 20px 0;
+.inputIn {
+	position: relative;
 }
 .preloader {
 	position: absolute;
 	top: 50%;
 	right: 50%;
+}
+.btn-search {
+	position: absolute;
+	top: 0;
+	right: 0.5rem;
+}
+.radio-btn {
+	display: flex;
+	gap: 1.5rem;
+	margin-bottom: 10px;
 }

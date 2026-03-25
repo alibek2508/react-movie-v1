@@ -9,13 +9,15 @@ export const Main = () => {
 	const [error, setError] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [searchText, setSearchText] = useState('Matrix');
-	const addHandleSearchText = text => {
+	const [type, setType] = useState('');
+	const addHandleSearchText = (text, movieType) => {
 		if (text.trim()) {
 			setSearchText(text.trim());
 		}
+		setType(movieType);
 	};
 	useEffect(() => {
-		const URL = `http://www.omdbapi.com/?i=tt3896198&apikey=7ff8bfac&s=${searchText}`;
+		const URL = `http://www.omdbapi.com/?i=tt3896198&apikey=7ff8bfac&s=${searchText}&type=${type} `;
 		const fetchData = async () => {
 			try {
 				setLoading(true);
@@ -33,7 +35,7 @@ export const Main = () => {
 			}
 		};
 		fetchData();
-	}, [error, searchText]);
+	}, [error, searchText, type]);
 	if (error) {
 		return <h1>Error: {error}</h1>;
 	}
